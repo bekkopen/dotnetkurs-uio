@@ -8,7 +8,7 @@ namespace Hello.Uio
         {
             Console.WriteLine("____________________________________________________");
             Console.WriteLine("|                                                  |");
-            Console.WriteLine("|                 HELLO UIO!                       |");
+            Console.WriteLine("|                 Hello UiO!                       |");
             Console.WriteLine("|                                                  |");
             Console.WriteLine("----------------------------------------------------");
             Console.ReadLine();
