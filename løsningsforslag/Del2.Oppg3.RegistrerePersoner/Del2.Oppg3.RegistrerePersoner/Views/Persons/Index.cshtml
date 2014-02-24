@@ -1,0 +1,26 @@
+﻿@model List<Del2.Oppg3.RegistrerePersoner.Models.Person>
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Persons</title>
+        <link rel="stylesheet" type="text/css" href="~/Content/css/style.css"/>
+    </head>
+    <body>
+        <table>
+            <tr class="header"><td>Navn</td><td class="center">Alder</td><td class="center">Kjønn</td></tr>
+            @foreach (var person in Model)
+            {
+                <tr>
+                    <td>@person.Name</td>
+                    <td class="center">@person.Age</td>
+                    <td class="center">@person.Gender</td>
+                </tr>
+            }
+        </table>
+        <div>
+            Legg til ny person ved å klikke @Html.ActionLink("her", "Insert")
+        </div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+﻿@model Del2.Oppg4.RedigerPersoner.Models.Person
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ny person</title>
+        <link rel="stylesheet" type="text/css" href="~/Content/css/style.css"/>
+    </head>
+    <body>
+        <div>
+              @using (Html.BeginForm("Insert", "Persons"))
+              {
+                  <fieldset>
+                      <legend>Person</legend>
+                      <div>
+                          <div class="labelName">@Html.LabelFor(model => model.Name)</div>
+                          @Html.EditorFor(model => model.Name)
+                          @Html.ValidationMessageFor(model => model.Name)
+                      </div>
+                      <div>
+                          <div class="labelName">@Html.LabelFor(model => model.Age)</div>
+                          @Html.EditorFor(model => model.Age)
+                          @Html.ValidationMessageFor(model => model.Age)
+                      </div>
+                      <div>
+                          <div class="labelName">@Html.LabelFor(model => model.Gender)</div>
+                          @Html.EditorFor(model => model.Gender)
+                          @Html.ValidationMessageFor(model => model.Gender)
+                      </div>
+                      <input type="submit" value="Legg til" />            
+                  </fieldset>
+              }
+        </div>
+    </body>
+</html>

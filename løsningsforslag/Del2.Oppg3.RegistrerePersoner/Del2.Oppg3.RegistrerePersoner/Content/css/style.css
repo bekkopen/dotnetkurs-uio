@@ -1,0 +1,20 @@
+﻿body {
+}
+
+.header {
+    font-weight: bold;
+}
+
+td {
+    border: 1px solid black;
+    width: 200px;
+}
+
+.center {
+    text-align: center;
+}
+
+.labelName {
+    width: 75px;
+    float: left;
+}

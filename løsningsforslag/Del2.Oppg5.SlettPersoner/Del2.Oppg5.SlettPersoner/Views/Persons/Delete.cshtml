@@ -1,0 +1,22 @@
+﻿@model Del2.Oppg5.SlettPersoner.Models.Person
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Slette</title>
+    </head>
+    <body>
+        <div>
+              @using (Html.BeginForm("Delete", "Persons"))
+              {
+                  <div>Er du sikker på at du vil slette @Model.Name?</div>
+                  <input type="submit" value="Slett" />
+              }
+        </div>
+    </body>
+</html>

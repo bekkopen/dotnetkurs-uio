@@ -1,0 +1,32 @@
+﻿@model List<Del2.Oppg4.RedigerPersoner.Models.Person>
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Persons</title>
+        <link rel="stylesheet" type="text/css" href="~/Content/css/style.css"/>
+    </head>
+    <body>
+        <table>
+            <tr class="header">
+                <td>Navn</td>
+                <td class="center">Alder</td>
+                <td class="center">Kjønn</td>
+                <td></td>
+            </tr>
+            @foreach (var person in Model)
+            {
+                <tr>
+                    <td>@person.Name</td>
+                    <td class="center">@person.Age</td>
+                    <td class="center">@person.Gender</td>
+                    <td>@Html.ActionLink("Redigèr", "Update", new {Id = person.Id})</td>
+                </tr>
+            }
+        </table>
+        <div>
+            Legg til ny person ved å klikke @Html.ActionLink("her", "Insert")
+        </div>
+    </body>
+</html>
